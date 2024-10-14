@@ -1,0 +1,6 @@
+div { text-align: center; width: 50%; margin: auto;}
+table th { font-size: 26px;}
+table { margin: auto; font-size: 24px;}
+button { font-size: 18px; border-radius: 10px; }
+nav.navbar, footer { border-radius: 10px; margin: 20px; }
+ion-icon { font-size: 20px; padding-right: 5px; padding-left: 5px;}
