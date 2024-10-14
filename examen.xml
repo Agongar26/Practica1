@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXAMEN>
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta1</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta2</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta3</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta4</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta5</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta6</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta7</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta8</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta9</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+
+    <PREGUNTA>
+        <ENCABEZADO>Pregunta10</ENCABEZADO>
+        <RESPUESTA1>Respuesta1</RESPUESTA1>
+        <RESPUESTA2>Respuesta2</RESPUESTA2>
+        <RESPUESTA3>Respuesta3</RESPUESTA3>
+        <RESPUESTA4>Respuesta4</RESPUESTA4>
+    </PREGUNTA>
+</EXAMEN>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Examen</title>
+</head>
+<body>
+
+    <h1>Examen sobre Lenguaje de Marcas</h1>
+    <p class="examen"></p>
+    <button type="button" onclick="loadDoc()">Mostrar Preguntas</button>
+    <br><br>
+    <table id="demo"></table>
+
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "examen.xml", true);
+            xhttp.send();
+        }
+
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>Pregunta</th><th>Respuesta 1</th><th>Respuesta 2</th><th>Respuesta 3</th><th>Respuesta 4</th></tr>";
+            var x = xmlDoc.getElementsByTagName("PREGUNTA");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                x[i].getElementsByTagName("ENCABEZADO")[0].childNodes[0]. nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("RESPUESTA1")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("RESPUESTA2")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("RESPUESTA3")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("RESPUESTA4")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+
+</body>
+</html>
