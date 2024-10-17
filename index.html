@@ -40,15 +40,24 @@
       </nav>
 
     <div>
+      <div class="encabezado">
         <h1>Examen sobre Lenguaje de Marcas</h1>
-        <p class="examen"></p>
-        <!--<button type="button" onclick="loadDoc()">Mostrar Preguntas</button>-->
+        <br>
+      </div>
+      <div class="contenido">
         <table id="demo"><tr><td>Prueba</td></tr></table>
         <br>
+      </div>
+      <div class="controls">
         <button type="button" onclick="ActualizarDoc(-1)">Anterior</button>
         <button type="button" onclick="ActualizarDoc(1)">Siguiente</button>
+        <button type="button" onclick="RespuestaCorrecta()"></button>
+        <p id="prueba"></p>
         <br><br>
+      </div>
     </div>
+
+    <p id="prueba2">Prueba</p>
 
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">

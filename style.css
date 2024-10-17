@@ -1,4 +1,7 @@
-div { text-align: center; width: 50%; margin: auto;}
+div { text-align: center; width: 75%; margin: auto;}
+.encabezado { width: 100%;}
+.contenido { min-height: 300px; }
+.contenido td { text-align: left;}
 table th { font-size: 26px;}
 table { margin: auto; font-size: 24px;}
 button { font-size: 18px; border-radius: 10px; }

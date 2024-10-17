@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EXAMEN>
     <PREGUNTA>
-        <ENCABEZADO>Pregunta1</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿QUÉ SIGNIFICA HTML?</ENCABEZADO>
+        <RESPUESTA correcta="true">HyperText Markup Languaje</RESPUESTA>
+        <RESPUESTA correcta="false">HyperText Markdown Language</RESPUESTA>
+        <RESPUESTA correcta="false">HyperTool Markup Language</RESPUESTA>
+        <RESPUESTA correcta="flase">HyperTool Markdown Language</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta2</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>CUÁL ES LA ETIQUETA CORRECTA PARA UN ENLACE EN HTML?</ENCABEZADO>
+        <RESPUESTA>&lt; link &gt;</RESPUESTA>
+        <RESPUESTA correcta="true">&lt; a &gt;</RESPUESTA>
+        <RESPUESTA>&lt; href &gt;</RESPUESTA>
+        <RESPUESTA>&lt; curl &gt;</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta3</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿QUÉ PROPIEDAD DE CSS SE USA PARA CAMBIAR EL COLOR DE FONDO DE UN ELEMENTO?</ENCABEZADO>
+        <RESPUESTA>color</RESPUESTA>
+        <RESPUESTA correcta="true">background-color</RESPUESTA>
+        <RESPUESTA>bgcolor</RESPUESTA>
+        <RESPUESTA>background</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta4</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿CÓMO SE SELECCIONA UN ELEMENTO CON EL ID "header" EN CSS?</ENCABEZADO>
+        <RESPUESTA>.header</RESPUESTA>
+        <RESPUESTA>header</RESPUESTA>
+        <RESPUESTA correcta="true">#header</RESPUESTA>
+        <RESPUESTA>*header</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta5</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿QUÉ MÉTODO DE JavaScript SE USA PARA ESCRIBIR EN LA CONSOLA DEL NAVEGADOR?</ENCABEZADO>
+        <RESPUESTA>console.write()</RESPUESTA>
+        <RESPUESTA>console.output()</RESPUESTA>
+        <RESPUESTA correcta="true">console.log()</RESPUESTA>
+        <RESPUESTA>console.print()</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta6</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿CUÁL ES LA FUNCIÓN PRINCIPAL DE AJAX?</ENCABEZADO>
+        <RESPUESTA>Crear animaciones en la web</RESPUESTA>
+        <RESPUESTA correcta="true">Enviar y recibir datos de un servidor sin recargar la página</RESPUESTA>
+        <RESPUESTA>Estilizar páginas web</RESPUESTA>
+        <RESPUESTA>Validar formularios</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta7</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿QUÉ OBJETIVO SE UTILIZA EN JavaScript PARA REALIZAR SOLICITUDES AJAX?</ENCABEZADO>
+        <RESPUESTA correcta="true">XMLHttpRequest</RESPUESTA>
+        <RESPUESTA>AJAXRequest</RESPUESTA>
+        <RESPUESTA>FetchRequest</RESPUESTA>
+        <RESPUESTA>HTTPClient</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta8</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿QUE SIGNIFICA XML?</ENCABEZADO>
+        <RESPUESTA correcta="true">Extensible Markup Language</RESPUESTA>
+        <RESPUESTA>Extra Markup Language</RESPUESTA>
+        <RESPUESTA>Extended Markup Language</RESPUESTA>
+        <RESPUESTA>Extensible Markdown Language</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta9</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿CUÁL ES LA SÍNTASIS CORRECTA PARA CREAR UNA FUNCIÓN EN JavaScript?</ENCABEZADO>
+        <RESPUESTA>function = myFunction() {}</RESPUESTA>
+        <RESPUESTA correcta="true">function myFunction() {}</RESPUESTA>
+        <RESPUESTA>myFunction function() {}</RESPUESTA>
+        <RESPUESTA>function: myFunction() {}</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
-        <ENCABEZADO>Pregunta10</ENCABEZADO>
-        <RESPUESTA1>Respuesta1</RESPUESTA1>
-        <RESPUESTA2>Respuesta2</RESPUESTA2>
-        <RESPUESTA3>Respuesta3</RESPUESTA3>
-        <RESPUESTA4>Respuesta4</RESPUESTA4>
+        <ENCABEZADO>¿QUÉ ETIQUETA SE USA PARA DEFINIR UNA TABLA EN HTML?</ENCABEZADO>
+        <RESPUESTA correcta="true">&lt; table &gt;</RESPUESTA>
+        <RESPUESTA>&lt; tab &gt;</RESPUESTA>
+        <RESPUESTA>&lt; tbl &gt;</RESPUESTA>
+        <RESPUESTA>&lt; t &gt;</RESPUESTA>
     </PREGUNTA>
 </EXAMEN>

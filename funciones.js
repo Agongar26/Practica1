@@ -1,4 +1,6 @@
 var Num = 0;
+var Calificacion = 0;
+
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -11,12 +13,36 @@ function loadDoc() {
 }
 
 function ActualizarDoc(Valor) {
-    if (Valor > 0){
+    if (Valor > 0 && Num < 9){
         this.Num++;
-    } else{
+    } else if (Valor < 0 && Num > 0){
         this.Num--;
     }
     loadDoc();
+}
+
+function RespuestaCorrecta() {
+        // Cargar el XML
+    const parser = new DOMParser();
+    const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+    <EXAMEN>
+        <PREGUNTA>
+        <ENCABEZADO>¿QUÉ SIGNIFICA HTML?</ENCABEZADO>
+        <RESPUESTA correcta="true">HyperText Markup Languaje</RESPUESTA>
+        <RESPUESTA>HyperText Markdown Language</RESPUESTA>
+        <RESPUESTA>HyperTool Markup Language</RESPUESTA>
+        <RESPUESTA>HyperTool Markdown Language</RESPUESTA>
+    </PREGUNTA>
+    </EXAMEN>`;
+    const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+
+    // Obtener todas las respuestas correctas
+    const correctAnswers = xmlDoc.querySelectorAll('RESPUESTA[correcta="true"]');
+
+    // Mostrar las respuestas correctas
+    correctAnswers.forEach(answer => {
+        document.getElementById('prueba2').innerHTML = answer.textContent;
+    });
 }
 
 function myFunction(xml) {
@@ -24,18 +50,57 @@ function myFunction(xml) {
     var xmlDoc = xml.responseXML;
     var table = "";
     var x = xmlDoc.getElementsByTagName("PREGUNTA");
+    let RespuestasCorrectas = [];
     
     table += "<tr><th>" +
-    x[Num].getElementsByTagName("ENCABEZADO")[0].childNodes[0]. nodeValue +
-    "</th></tr><tr><td>" +
-    x[Num].getElementsByTagName("RESPUESTA1")[0].childNodes[0].nodeValue +
-    "</td></tr><tr><td>" +
-    x[Num].getElementsByTagName("RESPUESTA2")[0].childNodes[0].nodeValue +
-    "</td></tr><tr><td>" +
-    x[Num].getElementsByTagName("RESPUESTA3")[0].childNodes[0].nodeValue +
-    "</td></tr><tr><td>" +
-    x[Num].getElementsByTagName("RESPUESTA4")[0].childNodes[0].nodeValue +
-    "</td></tr>";
+    x[Num].getElementsByTagName("ENCABEZADO")[0].childNodes[0].nodeValue +
+    "</th></tr><tr><td><input type='radio' name='Exam' value='" +
+    x[Num].getElementsByTagName("RESPUESTA")[0].childNodes[0].nodeValue +
+    "' onclick='checkAnswer(this, " + Num + ")'>" +
+    x[Num].getElementsByTagName("RESPUESTA")[0].childNodes[0].nodeValue +
+    "</input></td></tr><tr><td><tr><td><input type='radio' name='Exam' value='"+
+    x[Num].getElementsByTagName("RESPUESTA")[1].childNodes[0].nodeValue +
+    "' onclick='checkAnswer(this, " + Num + ")'>" +
+    x[Num].getElementsByTagName("RESPUESTA")[1].childNodes[0].nodeValue +
+    "</input></td></tr><tr><td><input type='radio' name='Exam' value ='>" +
+    x[Num].getElementsByTagName("RESPUESTA")[2].childNodes[0].nodeValue +
+    "' onclick='checkAnswer(this, " + Num + ")'>" +
+    x[Num].getElementsByTagName("RESPUESTA")[2].childNodes[0].nodeValue +
+    "</input></td></tr><tr><td><input type='radio' name='Exam' value='>" +
+    x[Num].getElementsByTagName("RESPUESTA")[3].childNodes[0].nodeValue +
+    "' onclick='checkAnswer(this, " + Num + ")'>" +
+    x[Num].getElementsByTagName("RESPUESTA")[3].childNodes[0].nodeValue +
+    "</input></td></tr>";
     //Num ++;
-    document.getElementById("demo").innerHTML = table;
+    document.getElementById("demo").innerHTML = table + "<br><p id='Calificacion'>Calificación: " + Calificacion + "</p>";
+
+    let radios = document.getElementsByName('Exam');
+    let selectedValue;
+    for (let radio of radios) {
+        if (radio.checked) {
+            selectedValue = radio.value;
+            break;
+        }
+    }
+
+    document.getElementById("Calificacion").innerHTML = Calificacion;
+
+    // Obtener todas las respuestas correctas
+    const correctAnswers = xmlDoc.querySelectorAll('RESPUESTA[correcta="true"]');
+    
+    RespuestasCorrectas[Num] = correctAnswers[Num].textContent;
+    document.getElementById('prueba2').innerHTML = RespuestasCorrectas[Num];
+}
+
+function checkAnswer(radio, num) {
+
+    if (radio.value === RespuestasCorrectas[num]) {
+        alert("Acierto");
+        Calificacion++;
+        document.getElementById("Calificacion").innerHTML = Calificacion;
+    } else {
+        alert("Fallo");
+        document.getElementById("Calificacion").innerHTML = Calificacion;
+        Calificacion--;
+    }
 }
