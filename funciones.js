@@ -1,5 +1,7 @@
 var Num = 0;
 var Calificacion = 0;
+var RespuestasCorrectas = [];
+var RespuestasUsuairo = [];
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
@@ -14,44 +16,19 @@ function loadDoc() {
 
 function ActualizarDoc(Valor) {
     if (Valor > 0 && Num < 9){
-        this.Num++;
+        Num++;
     } else if (Valor < 0 && Num > 0){
-        this.Num--;
+        Num--;
     }
     loadDoc();
 }
 
-function RespuestaCorrecta() {
-        // Cargar el XML
-    const parser = new DOMParser();
-    const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
-    <EXAMEN>
-        <PREGUNTA>
-        <ENCABEZADO>¿QUÉ SIGNIFICA HTML?</ENCABEZADO>
-        <RESPUESTA correcta="true">HyperText Markup Languaje</RESPUESTA>
-        <RESPUESTA>HyperText Markdown Language</RESPUESTA>
-        <RESPUESTA>HyperTool Markup Language</RESPUESTA>
-        <RESPUESTA>HyperTool Markdown Language</RESPUESTA>
-    </PREGUNTA>
-    </EXAMEN>`;
-    const xmlDoc = parser.parseFromString(xmlString, "text/xml");
-
-    // Obtener todas las respuestas correctas
-    const correctAnswers = xmlDoc.querySelectorAll('RESPUESTA[correcta="true"]');
-
-    // Mostrar las respuestas correctas
-    correctAnswers.forEach(answer => {
-        document.getElementById('prueba2').innerHTML = answer.textContent;
-    });
-}
 
 function myFunction(xml) {
-    var i;
     var xmlDoc = xml.responseXML;
     var table = "";
     var x = xmlDoc.getElementsByTagName("PREGUNTA");
-    let RespuestasCorrectas = [];
-    
+
     table += "<tr><th>" +
     x[Num].getElementsByTagName("ENCABEZADO")[0].childNodes[0].nodeValue +
     "</th></tr><tr><td><input type='radio' name='Exam' value='" +
@@ -71,36 +48,25 @@ function myFunction(xml) {
     "' onclick='checkAnswer(this, " + Num + ")'>" +
     x[Num].getElementsByTagName("RESPUESTA")[3].childNodes[0].nodeValue +
     "</input></td></tr>";
-    //Num ++;
+
     document.getElementById("demo").innerHTML = table + "<br><p id='Calificacion'>Calificación: " + Calificacion + "</p>";
 
-    let radios = document.getElementsByName('Exam');
-    let selectedValue;
-    for (let radio of radios) {
-        if (radio.checked) {
-            selectedValue = radio.value;
-            break;
-        }
-    }
-
-    document.getElementById("Calificacion").innerHTML = Calificacion;
-
-    // Obtener todas las respuestas correctas
     const correctAnswers = xmlDoc.querySelectorAll('RESPUESTA[correcta="true"]');
-    
     RespuestasCorrectas[Num] = correctAnswers[Num].textContent;
-    document.getElementById('prueba2').innerHTML = RespuestasCorrectas[Num];
+
+    /*let Seleccionada = xmlDoc.querySelector("input[name='RESPUESTA']:checked");
+    RespuestasUsuairo[Num] = Seleccionada.value;*/
+
+    //document.getElementById('prueba2').innerHTML = RespuestasCorrectas[Num];
 }
 
 function checkAnswer(radio, num) {
-
     if (radio.value === RespuestasCorrectas[num]) {
-        alert("Acierto");
+        //alert("Acierto");
         Calificacion++;
-        document.getElementById("Calificacion").innerHTML = Calificacion;
     } else {
-        alert("Fallo");
-        document.getElementById("Calificacion").innerHTML = Calificacion;
-        Calificacion--;
+        //alert("Fallo");
+        Calificacion -= 1/3;
     }
+    document.getElementById("Calificacion").innerHTML = "Calificación: " + Calificacion;
 }
