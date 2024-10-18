@@ -39,7 +39,7 @@ function myFunction(xml) {
     for (var i = 0; i < 4; i++) {
         var respuesta = x[Num].getElementsByTagName("RESPUESTA")[i].childNodes[0].nodeValue;
         var checked = RespuestasUsuairo[Num] === respuesta ? "checked" : "";
-        table += "<tr><td><input type='radio' name='Exam' value='" +
+        table += "<tr><td><label class='label-input'><input type='radio' name='Exam' value='" +
         respuesta + "' " + checked + " onclick='checkAnswer(this, " + Num + ")'>" +
         respuesta + "</input></td></tr>";
     }
@@ -54,7 +54,7 @@ function myFunction(xml) {
     if(Num<9){
         document.getElementById("controls").innerHTML = "<button type='button' onclick='ActualizarDoc(-1)'>Anterior</button><button type='button' onclick='ActualizarDoc(1)'>Siguiente</button>";//<p id='prueba'></p><p>" + Num + "</p>"
     } else{
-        document.getElementById("controls").innerHTML = "<button type='button' onclick='ActualizarDoc(-1)'>Anterior</button><button type='button' onclick='ActualizarDoc(1)'>Siguiente</button></p><button type='button' onclick='ActualizarDoc(2)'>Finalizar</button>";//<p id='prueba'></p><p>" + Num + "</p></p><button type='button' onclick='ActualizarDoc(2)'>Finalizar</button>"
+        document.getElementById("controls").innerHTML = "<button type='button' onclick='ActualizarDoc(-1)'>Anterior</button><button type='button' onclick='ActualizarDoc(1)'>Siguiente</button><button type='button' onclick='ActualizarDoc(2)'>Finalizar</button>";//<p id='prueba'></p><p>" + Num + "</p></p><button type='button' onclick='ActualizarDoc(2)'>Finalizar</button>"
     } 
 }
 
@@ -82,6 +82,6 @@ function checkAnswer(radio, num) {
 }
 
 function Terminar() {
-    document.getElementById("demo").innerHTML = "<p>Tu calificación es: " + Calificacion.toFixed(2) + "/10</p>";
+    document.getElementById("demo").innerHTML = "<p>Tu calificación es: " + Calificacion.toFixed(2) + "/10.00</p>";
     document.getElementById("controls").innerHTML = "";
 }
