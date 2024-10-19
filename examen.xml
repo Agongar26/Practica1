@@ -2,7 +2,7 @@
 <EXAMEN>
     <PREGUNTA>
         <ENCABEZADO>¿QUÉ SIGNIFICA HTML?</ENCABEZADO>
-        <RESPUESTA correcta="true">HyperText Markup Languaje</RESPUESTA>
+        <RESPUESTA correcta="true">HyperText Markup Language</RESPUESTA>
         <RESPUESTA correcta="false">HyperText Markdown Language</RESPUESTA>
         <RESPUESTA correcta="false">HyperTool Markup Language</RESPUESTA>
         <RESPUESTA correcta="flase">HyperTool Markdown Language</RESPUESTA>
@@ -10,73 +10,73 @@
 
     <PREGUNTA>
         <ENCABEZADO>CUÁL ES LA ETIQUETA CORRECTA PARA UN ENLACE EN HTML?</ENCABEZADO>
-        <RESPUESTA>&lt; link &gt;</RESPUESTA>
+        <RESPUESTA correcta="false">&lt; link &gt;</RESPUESTA>
         <RESPUESTA correcta="true">&lt; a &gt;</RESPUESTA>
-        <RESPUESTA>&lt; href &gt;</RESPUESTA>
-        <RESPUESTA>&lt; curl &gt;</RESPUESTA>
+        <RESPUESTA correcta="false">&lt; href &gt;</RESPUESTA>
+        <RESPUESTA correcta="false">&lt; curl &gt;</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿QUÉ PROPIEDAD DE CSS SE USA PARA CAMBIAR EL COLOR DE FONDO DE UN ELEMENTO?</ENCABEZADO>
-        <RESPUESTA>color</RESPUESTA>
+        <RESPUESTA correcta="false">color</RESPUESTA>
+        <RESPUESTA correcta="false">background</RESPUESTA>
+        <RESPUESTA correcta="false">bgcolor</RESPUESTA>
         <RESPUESTA correcta="true">background-color</RESPUESTA>
-        <RESPUESTA>bgcolor</RESPUESTA>
-        <RESPUESTA>background</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿CÓMO SE SELECCIONA UN ELEMENTO CON EL ID "header" EN CSS?</ENCABEZADO>
-        <RESPUESTA>.header</RESPUESTA>
-        <RESPUESTA>header</RESPUESTA>
+        <RESPUESTA correcta="false">.header</RESPUESTA>
+        <RESPUESTA correcta="false">header</RESPUESTA>
         <RESPUESTA correcta="true">#header</RESPUESTA>
-        <RESPUESTA>*header</RESPUESTA>
+        <RESPUESTA correcta="false">*header</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿QUÉ MÉTODO DE JavaScript SE USA PARA ESCRIBIR EN LA CONSOLA DEL NAVEGADOR?</ENCABEZADO>
-        <RESPUESTA>console.write()</RESPUESTA>
-        <RESPUESTA>console.output()</RESPUESTA>
+        <RESPUESTA correcta="false">console.write()</RESPUESTA>
+        <RESPUESTA correcta="false">console.output()</RESPUESTA>
         <RESPUESTA correcta="true">console.log()</RESPUESTA>
-        <RESPUESTA>console.print()</RESPUESTA>
+        <RESPUESTA correcta="false">console.print()</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿CUÁL ES LA FUNCIÓN PRINCIPAL DE AJAX?</ENCABEZADO>
-        <RESPUESTA>Crear animaciones en la web</RESPUESTA>
+        <RESPUESTA correcta="false">Crear animaciones en la web</RESPUESTA>
         <RESPUESTA correcta="true">Enviar y recibir datos de un servidor sin recargar la página</RESPUESTA>
-        <RESPUESTA>Estilizar páginas web</RESPUESTA>
-        <RESPUESTA>Validar formularios</RESPUESTA>
+        <RESPUESTA correcta="false">Estilizar páginas web</RESPUESTA>
+        <RESPUESTA correcta="false">Validar formularios</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿QUÉ OBJETIVO SE UTILIZA EN JavaScript PARA REALIZAR SOLICITUDES AJAX?</ENCABEZADO>
         <RESPUESTA correcta="true">XMLHttpRequest</RESPUESTA>
-        <RESPUESTA>AJAXRequest</RESPUESTA>
-        <RESPUESTA>FetchRequest</RESPUESTA>
-        <RESPUESTA>HTTPClient</RESPUESTA>
+        <RESPUESTA correcta="false">AJAXRequest</RESPUESTA>
+        <RESPUESTA correcta="false">FetchRequest</RESPUESTA>
+        <RESPUESTA correcta="false">HTTPClient</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿QUE SIGNIFICA XML?</ENCABEZADO>
+        <RESPUESTA correcta="false">Extra Markup Language</RESPUESTA>
+        <RESPUESTA correcta="false">Extended Markup Language</RESPUESTA>
+        <RESPUESTA correcta="false">Extensible Markdown Language</RESPUESTA>
         <RESPUESTA correcta="true">Extensible Markup Language</RESPUESTA>
-        <RESPUESTA>Extra Markup Language</RESPUESTA>
-        <RESPUESTA>Extended Markup Language</RESPUESTA>
-        <RESPUESTA>Extensible Markdown Language</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿CUÁL ES LA SÍNTASIS CORRECTA PARA CREAR UNA FUNCIÓN EN JavaScript?</ENCABEZADO>
-        <RESPUESTA>function = myFunction() {}</RESPUESTA>
+        <RESPUESTA correcta="false">function = myFunction() {}</RESPUESTA>
         <RESPUESTA correcta="true">function myFunction() {}</RESPUESTA>
-        <RESPUESTA>myFunction function() {}</RESPUESTA>
-        <RESPUESTA>function: myFunction() {}</RESPUESTA>
+        <RESPUESTA correcta="false">myFunction function() {}</RESPUESTA>
+        <RESPUESTA correcta="false">function: myFunction() {}</RESPUESTA>
     </PREGUNTA>
 
     <PREGUNTA>
         <ENCABEZADO>¿QUÉ ETIQUETA SE USA PARA DEFINIR UNA TABLA EN HTML?</ENCABEZADO>
         <RESPUESTA correcta="true">&lt; table &gt;</RESPUESTA>
-        <RESPUESTA>&lt; tab &gt;</RESPUESTA>
-        <RESPUESTA>&lt; tbl &gt;</RESPUESTA>
-        <RESPUESTA>&lt; t &gt;</RESPUESTA>
+        <RESPUESTA correcta="false">&lt; tab &gt;</RESPUESTA>
+        <RESPUESTA correcta="false">&lt; tbl &gt;</RESPUESTA>
+        <RESPUESTA correcta="false">&lt; t &gt;</RESPUESTA>
     </PREGUNTA>
 </EXAMEN>
