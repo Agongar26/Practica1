@@ -41,15 +41,15 @@ function myFunction(xml) {
         var checked = RespuestasUsuairo[Num] === respuesta ? "checked" : "";
         table += "<tr><td><label class='label-input'><input type='radio' name='Exam' value='" +
         respuesta + "' " + checked + " onclick='checkAnswer(this, " + Num + ")'>" +
-        respuesta + "</input></td></tr>";
+        respuesta + "</label></input></td></tr>";
     }
 
-    document.getElementById("demo").innerHTML = table;// + "<br><p id='Calificacion'>Calificación: " + Calificacion + "</p>";
+    document.getElementById("demo").innerHTML = table + "<br><p>Calificación: " + Calificacion + "</p>";
+
+    document.getElementById("demo").innerHTML = table;
 
     const correctAnswers = xmlDoc.querySelectorAll('RESPUESTA[correcta="true"]');
     RespuestasCorrectas[Num] = correctAnswers[Num].textContent;
-
-    //document.getElementById('prueba2').innerHTML = RespuestasCorrectas[Num];
 
     if(Num<9){
         document.getElementById("controls").innerHTML = "<button type='button' onclick='ActualizarDoc(-1)'>Anterior</button><button type='button' onclick='ActualizarDoc(1)'>Siguiente</button>";//<p id='prueba'></p><p>" + Num + "</p>"
@@ -77,11 +77,51 @@ function checkAnswer(radio, num) {
     } else {
         Calificacion -= 1/3;
     }
-
-    //document.getElementById("Calificacion").innerHTML = "Calificación: " + Calificacion;
 }
 
 function Terminar() {
-    document.getElementById("demo").innerHTML = "<p>Tu calificación es: " + Calificacion.toFixed(2) + "/10.00</p>";
-    document.getElementById("controls").innerHTML = "";
+    if(Calificacion<5){
+        document.getElementById("demo").innerHTML = "<h1 style='color: red;'>Has suspendido, ¡más suerte la próxima vez!<h1/><br><p>Tu calificación es: " + Calificacion.toFixed(2) + "/10.00</p>";
+        document.getElementById("controls").innerHTML = "<button type='button' onclick='Soluciones()'>Ver solución examen</button><button type='button' onclick='Repetir()'>Repetir examen</button>";
+    } else if(Calificacion == 5){
+        document.getElementById("demo").innerHTML = "<h1 style='color: lightcoral;'>Has aprobado, ¡sigue así!<h1/><br><p>Tu calificación es: " + Calificacion.toFixed(2) + "/10.00</p>";
+        document.getElementById("controls").innerHTML = "<button type='button' onclick='Soluciones()'>Ver solución examen</button><button type='button' onclick='Repetir()'>Repetir examen</button>";
+    } else if(Calificacion > 5 && Calificacion < 7){
+        document.getElementById("demo").innerHTML = "<h1 style='color: orange;'>Has aprobado, ¡continúa así!<h1/><br><p>Tu calificación es: " + Calificacion.toFixed(2) + "/10.00</p>";
+        document.getElementById("controls").innerHTML = "<button type='button' onclick='Soluciones()'>Ver solución examen</button><button type='button' onclick='Repetir()'>Repetir examen</button>";
+    } else if(Calificacion > 7 && Calificacion < 9){
+        document.getElementById("demo").innerHTML = "<h1 style='color: yellowgreen;'>Enhorabuena, ¡Continúa así!<h1/><br><p>Tu calificación es: " + Calificacion.toFixed(2) + "/10.00</p>";
+        document.getElementById("controls").innerHTML = "<button type='button' onclick='Soluciones()'>Ver solución examen</button><button type='button' onclick='Repetir()'>Repetir examen</button>";
+    } else {
+        document.getElementById("demo").innerHTML = "<h1 style='color: green;'>¡Excelente!, ¡continúa con esa actitud!<h1/><br><p>Tu calificación es: " + Calificacion.toFixed(2) + "/10.00</p>";
+        document.getElementById("controls").innerHTML = "<button type='button' onclick='Soluciones()'>Ver solución examen</button><button type='button' onclick='Repetir()'>Repetir examen</button>";
+    }
+}
+
+function Repetir() {
+    Num = 0;
+    Calificacion = 0;
+    RespuestasCorrectas = [];
+    RespuestasUsuairo = [];
+    loadDoc();
+}
+
+function Soluciones(){
+    var table = "";
+    table += "<tr><th colspan='2'>Respuestas correctas</th></tr><tr>";
+    
+    for (var i=0; i<5; i++) {
+       table += "<td><p style='font-weight: bold; font-size: 20px;'>" + (i+1) + ".-" + RespuestasCorrectas[i] + "</p></td><td><p style='font-weight: bold; font-size: 20px;'>" + (i+6) + ".-" + RespuestasCorrectas[i+5] + "</p></td></tr><tr>"
+    }
+    table += "</tr>";
+
+    table += "<br><tr><th colspan='2'>Respuestas Usuario</th></tr><tr>";
+    
+    for (var i=0; i<5; i++) {
+       table += "<td><p style='font-weight: bold; font-size: 20px;'>" + (i+1) + ".-" + RespuestasUsuairo[i] + "</p></td><td><p style='font-weight: bold; font-size: 20px;'>" + (i+6) + ".-" + RespuestasUsuairo[i+5] + "</p></td></tr><tr>"
+    }
+    table += "</tr>";
+
+    document.getElementById("demo").innerHTML = table;
+    document.getElementById("controls").innerHTML = "<button type='button' onclick='Repetir()'>Repetir examen</button>";
 }
